@@ -1,0 +1,80 @@
+/* 
+
+Media Queries 
+
+Permiten aplicar estilos CSS especificos de acuerdo a las caracteristicas del dispositivo. 
+
+Utilizan la regla @media para condicionar la aplicación de estos estilos y sigue la siguiente sintaxis: 
+
+  @media media-type conector (media-feature-rule) {
+    Reglas de Css que se van a aplicar cuando se cumpla estas condiciones.
+  }
+
+Media Type (Tipos de Medios)
+
+  * screen -> Pantallas de computadora, tablets o de móviles.
+  * speech -> Sitentizadores de voz. 
+  * print -> Para documentos impresos. Imprimir la web.
+  * all -> Todos los dispositivos. Valor por defecto. 
+
+Conectors (Conectores)
+
+* add -> y -> Se coloca entre el media-type y el media-feature.
+* or -> o -Se usa coma "," para separar media-feature-
+* not -> negación. -> Se coloca antes del media-type.
+
+Media Features (Caracteristicas del Medio)
+
+* width -> Ancho de la ventana del navegador 
+* height -> Alto de la ventana del navegador.
+* main-width / max-widht -> Ancho minimo y maximo del navegador. 
+* min-height / max-heiht -> Altura minima y maxima del navegador.
+*orieentacion -> Orientación del dispositivo: portrait o landscape.
+* resolucion -> Densidad de pixeles. 
+* color -> Numero de bits por color.
+*/
+
+/* Estilo inicial de la web */
+body {
+  background-color: #5e929f;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+
+/* Media Queries */
+
+@media screen and (maz-width: 1024px) {
+  body {
+    background-color: #305165;
+  }
+
+  h1 {
+    font-family: serif;
+    font-size: 5rem;
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+    body {
+      background-color: #b1ae77;
+    }
+
+    h1 {
+     font-size: 1rem;
+     font-family: Georgia, 'Times New Roman', Times, serif; 
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    body {
+      background-color: #aac9ba;
+    }
+
+    h1 {
+      font-size: 10rem;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  }
