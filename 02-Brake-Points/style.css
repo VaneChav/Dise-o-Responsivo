@@ -1,0 +1,108 @@
+/* 
+
+Breake Points
+
+Valores especificos del ancho de pantalla que cambia el diseño del sitio web para adaptarse mejor a las dimensiones del dispositivo.
+
+Ayuda a definir los estilos mediante los media queries. 
+Tradicionalmente los break points se definen según categorias comunes de los dispositivos. 
+
+Basandonos en los dispositivos::after
+
+  - Moviles pequeños: de 320px a 479px
+  - Moviles: de 480px a 767px ancho pantalla.
+  - Tablets: de 768px a 1023px ancho pantalla.
+  - Escritorio: de 1024 a 1279px ancho pantalla.
+  - Pantallas Grandes: 1280px y superiores ancho pantalla.
+
+Es recomendable usar los break points necesarios, generalmente 3 a 5, para mantener el código manejable.
+
+Los media queries se recomienda escribirlos al final del codigo css base.
+
+Metodologias de Diseño Responsivo.
+
+1. Mobile First (Primero Moviles)
+
+  Primero estabñecemos los estilos para móviles como base se usan los media queries con "min-width" para ir ampliando funcionabilidades. 
+
+2. Desktop First (Primero scritorio)
+
+  Primero establecemos los estilos para escritorio o pantallas grandes y se usan los media queries con "max-width" y vamos reduciendo el tamaño pantalla para ajustar las funcinalidades. 
+
+*/
+
+/* Mobile Fisrt - Break Points */
+
+/* Establecemos ESTILOS BAE para moviles pequeños de hasta 479px de ancho */
+
+body {
+  /* Estilo para moviles pequeños */
+  background-color: #305165;
+}
+
+/* Moviles medianos y grandes con min-width: 480px*/
+
+@media srceen and (min-width: 480px) {
+  body {
+    background-color: #aac9ba;
+  }
+}
+
+/* Tablets con min-width: 768px */
+
+@media srceen and (min-width: 768px) {
+  body {
+    background-color: #B1AE77;
+  }
+}
+
+@media screen and (min-width: 1280) {
+  body {
+    background-color: #5e929f;
+  }
+}
+
+/* Desktop First - Break Points */
+
+/* Definimos los estilos base para pantallas grandes 1280px y superiores*/
+
+h1 {
+  font-size: 5rem;
+  color:black
+}
+
+/*  Escritorios con max-width 1279*/
+
+@media screen and (max-width: 1279px) {
+  h1 {
+    font-size: 2rem;
+    color: indigo;
+  }
+}
+
+/*Tablets */
+
+@media screen and (max-width: 1023px) {
+  h1 {
+    font-size: 8rem;
+    color:darkslategrey ;
+  }
+}
+
+/*Moviles Medianos y Grandes con max-width: 767*/
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+    color: darkred;
+  }
+}
+
+/*Moviles pequeños con max-width: 779*/
+
+@media screen and (max-width: 779px) {
+  h1 {
+    font-size: 10rem;
+    color:darkblue;
+  }
+}
