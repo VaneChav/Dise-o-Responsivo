@@ -1,0 +1,104 @@
+/* 
+
+Barra de Navegación > Mobile First
+
+1. Primero se escriben los estilos para dispositivos móviles.
+
+2. Luego se aplica cambios con media queries para pantallas más grandes: tablets, laptops, escritorio.
+
+3. Aplicaremos colores, tamaños y espaciados adecuados para una navegación clara.
+
+Estilos
+
+Móviles
+  - Menu en columna, centrado, con fondo oscuro y texto claro.
+ 
+Tablets
+  - El menu se convierte en fila y cambia de dondo
+
+Laptops
+  - Se añade espacio entre los elementos, se alinean a los lados y hay efeto al parar al mouse (hover)
+
+Escritorio
+  - ERl contenido se centra dentro de un ancho máximo para mejorar la presentación.
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* Estilos base Mobile */
+.brand {
+  padding: .75em 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #305165;
+}
+
+.menu-item {
+  color: aliceblue;
+  text-decoration: none;
+  text-align: center;
+  padding: .75em 0;
+}
+
+/* Break Point 768px > Tablets */
+
+@media screen and (min-width: 768px) {
+  .nav {
+    border-bottom: 1px solid rgb(221 221 221);
+  }
+
+  .menu {
+    flex-direction: row;
+    background-color:white;
+  }
+
+  .menu-item {
+  color: #305165;
+  flex-grow: 1;
+}
+}
+
+/* Break Point 1024px > Laptop */
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    padding: 0.75em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand {
+    padding: 0;
+  }
+
+  .menu {
+    gap: 2em;
+  }
+
+  .menu-item:hover {
+    color: #aac9ba;
+    cursor: pointer;
+  }
+}
+
+/* Break Point 1280px > Escritorio */
+
+@media screen and (min-width; 1280) {
+  .nav {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
